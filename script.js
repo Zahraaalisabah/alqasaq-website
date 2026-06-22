@@ -163,3 +163,32 @@ const scannerSwiper = new Swiper(".scannerSwiper", {
         1200: { slidesPerView: 4 }
     }
 });
+
+const inkSwiper = new Swiper(".inkSwiper", {
+
+loop: false,
+    spaceBetween: 25,
+    speed: 800,
+
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+    },
+
+    navigation: {
+        nextEl: ".inkSwiper .swiper-button-next",
+        prevEl: ".inkSwiper .swiper-button-prev",
+    },
+
+    pagination: {
+        el: ".inkSwiper .swiper-pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        0: { slidesPerView: 1.1 },
+        768: { slidesPerView: 2 },
+        992: { slidesPerView: 3 },
+        1200: { slidesPerView: 4 }
+    }
+});

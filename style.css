@@ -785,3 +785,12 @@ background:var(--card);
 .product-section .product-item:hover img{
     transform: scale(1.05);
 }
+.inkSwiper .product-item{
+    min-height:340px;
+}
+
+.inkSwiper .product-item img{
+    width:250px;
+    height:250px;
+    object-fit:contain;
+}
