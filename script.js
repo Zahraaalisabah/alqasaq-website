@@ -192,3 +192,22 @@ loop: false,
         1200: { slidesPerView: 4 }
     }
 });
+document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    
+    // رقم الهاتف المستلم مع المفتاح الدولي
+    const myPhoneNumber = "9647711117108"; 
+    
+    const text = `طلب تواصل جديد من الموقع:%0A` +
+                 `• الاسم: ${encodeURIComponent(name)}%0A` +
+                 `• الهاتف: ${encodeURIComponent(phone)}%0A` +
+                 `• البريد: ${encodeURIComponent(email)}%0A` +
+                 `• الرسالة: ${encodeURIComponent(message)}`;
+                 
+    window.open(`https://wa.me/${myPhoneNumber}?text=${text}`, '_blank');
+});
