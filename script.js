@@ -211,3 +211,31 @@ document.getElementById("whatsappForm").addEventListener("submit", function(e) {
                  
     window.open(`https://wa.me/${myPhoneNumber}?text=${text}`, '_blank');
 });
+
+const laserInkSwiper = new Swiper(".laserInkSwiper", {
+    loop: true,
+    spaceBetween: 25,
+    speed: 800,
+
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+    },
+
+    navigation: {
+        nextEl: ".laserInkSwiper .swiper-button-next",
+        prevEl: ".laserInkSwiper .swiper-button-prev",
+    },
+
+    pagination: {
+        el: ".laserInkSwiper .swiper-pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        0: { slidesPerView: 1.1 },
+        768: { slidesPerView: 2 },
+        992: { slidesPerView: 3 },
+        1200: { slidesPerView: 4 }
+    }
+});
